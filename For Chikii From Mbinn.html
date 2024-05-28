@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        body {
+            font-family: "Lucida Console", Courier, monospace;
+            background-image: url('old_book_texture.jpg'); /* Old book texture */
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(34, 135, 34, 0.6); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .play-button {
+            background-color: #ffcc00; /* Yellow */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .play-button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Congratulations on Your Thesis Defense!</h1>
+        <button class="play-button" onclick="playBackgroundSound()">Play Background Sound</button>
+        <div class="message">
+            <p>Selamat! Udah menyelesaikan salah satu chapter yang ada di hidupmu, sayangku chikiiiiii<3. Aku harap
+                perjalananmu kedepan akan semakin lebih baik dan tentunya akan selalu ada aku disampingmu! Mohon maaf atas
+                kekurangan diriku yang belum bisa hadir di universitas yang paling dibanggakan di kota yang penuh kenangan.
+                Dibawah ini adalah beberapa foto supaya kamu flashback dimasa-masa penelitianmu yang kwerenn itu, ada foto
+                kamu yang sangat cantik jelita dengan bibir merona ituu, ada foto cairan yang berhasil kamu jadiin gel karena
+                hipotesismu tentang detergen ituu, ada foto kamu lagi membuat rusuh labb dan yang terakhiirr ada foto chupa
+                cup cola fav kamuu yang selalu menemanii dimasa gundah gulana hatimu selamat menikmati tidurmu yang nyenyak, 
+                makanan terasa lebih nikmat, nafasmu terasa lebih lega. Aku tunggu baktimu dari ilmu yang telah kamu usahakan 
+                3 tahun belakangan di kota perjuangan, yaitu Kota Surabaya.
+                GOD BLESS U AND I LOVE YOU <3333</p>
+        </div>
+        <div class="images">
+            <img src="image1.jpg" alt="Image 1" width="200">
+            <img src="image2.jpg" alt="Image 2" width="200">
+            <img src="image3.jpg" alt="Image 3" width="200">
+            <img src="image4.jpg" alt="Image 4" width="200">
+        </div>
+        <button class="button" id="kissHugButton" onclick="sendKissAndHug()">Send a Kiss and Hug!</button>
+    </div>
+
+    <audio id="backgroundSound" loop>
+        <source src="background_sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="clickSound">
+        <source src="click_sound.opus" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playBackgroundSound() {
+            var backgroundSound = document.getElementById('backgroundSound');
+            backgroundSound.volume = 0.1; // Set volume to 10%
+            backgroundSound.play();
+        }
+
+        function sendKissAndHug() {
+            var clickSound = document.getElementById('clickSound');
+            clickSound.play();
+            alert("You sent a kiss and hug to the sender!");
+            // Additional action to send a kiss and hug can be added here
+        }
+    </script>
+</body>
+
+</html>
